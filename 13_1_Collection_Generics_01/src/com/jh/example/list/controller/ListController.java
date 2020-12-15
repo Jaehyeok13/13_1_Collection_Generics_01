@@ -71,8 +71,5 @@ public class ListController {
 		Collections.sort(List<T> list, Comparator<T> c)  지정한 Comparator클래스에 의한 정렬 (여러 개의 정렬)
 	 	Comparable, Comparator 인터페이스를 구현해서 이 객체 안에서는 이 필드를 가지고 정렬 기준을 세워줘야 한다.
 	 */
-	
-	
-	
     }
 }
