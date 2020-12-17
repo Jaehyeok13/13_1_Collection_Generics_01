@@ -7,8 +7,7 @@ public class equalsController {
     
     public boolean eqsort(Information im1, Information im2) {
 	boolean key = true;
-	System.out.println(im);
-	System.out.println(im2);
+	
 	return key;
     }
    
