@@ -15,7 +15,7 @@ public class ListController {
 	List exList = new ArrayList();	// 다형성
 	// 인터페이스	/ 인터페이스를 구현한 클래스
 	// 선언시 자동으로 10크기로 생성 된다.  초과시 자동으로 증가 / 고정도 가능하다.
-	
+	System.out.println(exList.size());
 	// 그 객체만 들어 갈수 있게 해주는 <> 제네릭 
 	List<Student> list = new ArrayList<Student>(3);
 	// Studnet 객체만 지정하게 후 크기 3으로 생성
@@ -43,8 +43,9 @@ public class ListController {
 	System.out.println("add(int index,E e) : " + list);
 	
 	// remove(Objeect o) : 해당 o 객체 삭제
-	list.remove(new Student("테스트", 0));
-	System.out.println(list.remove(new Student("테스트", 0 )));
+	System.out.println(list.remove(new Student("테스트", 0)));
+	list.remove(new Student("테스트",0)); // -> 이렇게 선언시 삭제 안될 수 있다. 삭제 할려고 하는 객체 new student 로 인해서 주소 값이 틀리기 때문에
+	// equals() 메서드를 오버라이드 하여 재정의로 같은 객체 인지 시켜줘야 한다.
 	System.out.println("remove(Object o)   : " + list);
 	// new Student 가 주소값을 가져와서 비교하기 때문에 
 

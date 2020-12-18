@@ -29,7 +29,37 @@ public class Student implements Comparable{
     public String toString() {
 	return "name : " + name + " score : " + score +" ";
     }
-
+    
+    public boolean equals(Object obj) {
+	// 객체로 3가지
+	// 1. 기본 적인 매개변수 객체가 같은지
+	if(this == obj) {
+	    return true;
+	}
+	// 2. 매개변수 받아온 객체 값 존재 확인
+	if(obj == null) {
+	    return false;
+	}
+	// 3. 현재 클래스와 매개변수 받은 클래스 확인
+	if(getClass() != obj.getClass()) {
+	    return false;
+	}
+	
+	Student other = (Student)obj;
+	// 매칭으로 같은지 구분할 파라매터 값
+	if(name == null) {
+	    if(other.name != null) {
+		return false;
+	    }
+	}else if(!name.equals(other.name)) {
+	    return false;
+	}
+	if(score != other.score) {
+	    return false;
+	}
+	return true;
+    }
+    
     // hasCode() = 두 객체가 같은 객체인지 확인 하는 메소드 정의된 것을 다시 오버라이딩 해준다. (재정의)
     @Override
     public int hashCode() {
