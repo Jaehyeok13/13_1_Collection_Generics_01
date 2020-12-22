@@ -82,7 +82,7 @@ public class Information {
     }
     // eclipse(IDE) 에서 equals() 메서드를 generate 시켜주는 기능을 가지고 있는데 자연스럽게 hashCode() 도 함께
     // generate 시켜준다. 즉,equals()와 hashCode() 를 같이 재정의하게 한다.
-    // hashCode 도 함께 정의하는 이유는 hash를 사용 하는 Collection(HashSet,HashMap,..)
+    // hashCode 도 함께 정의하는 이유는 hash를 사용 하는 Collection(HashSet,HashMap,..) 메서드
     // 사용시 같다고 생각하지 않기 때문에 문제가 발생 할 수 있다.
     // 그렇기 때문에 equals로 같은 객체라면 반드시 hashCode 도 같은 값이여야만 한다.
     //하지만 반대로 hashCode가 같은 값이더라도 equals로 같은 객체가 아닐 수 있다는 것을 유의해야 한다.
