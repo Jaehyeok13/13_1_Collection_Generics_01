@@ -1,6 +1,6 @@
 package com.jh.example.map.model.vo;
 
-public class Snack {
+public class Snack  {
     private String flavor;
     private int price;
     
@@ -57,4 +57,5 @@ public class Snack {
 	prime = prime * result + price;
 	return prime;
     }
+   
 }
